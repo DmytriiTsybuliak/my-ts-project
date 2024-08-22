@@ -87,7 +87,7 @@ numberStorage.addItem(2);
 console.log('Values of Numbers Storage: ', numberStorage.getItems()); // [1, 2]
 numberStorage.addItem('TEXT'); // Error: Argument of type 'number' is not assignable to parameter of type 'number'
 
-let x: unknown = 'hello';
+const x: unknown = 'hello';
 console.log('Value:', x, 'Length:', (<string>x).length);
 
 type UserP = {
@@ -97,3 +97,11 @@ type UserP = {
 };
 
 let User: UserP;
+
+let count = 0;
+const intervalId = setInterval(() => {
+  console.log(count++);
+}, 1000);
+setTimeout(() => {
+  clearInterval(intervalId);
+}, 5000);
