@@ -62,41 +62,41 @@ setupCounter(document.querySelector<HTMLButtonElement>('#counter')!);
 
 // console.log('this is a string: ', strLength1);
 
-class DataStorage<T> {
-  private data: T[] = [];
+// class DataStorage<T> {
+//   private data: T[] = [];
 
-  addItem(item: T) {
-    this.data.push(item);
-  }
+//   addItem(item: T) {
+//     this.data.push(item);
+//   }
 
-  getItems() {
-    return [...this.data];
-  }
-}
+//   getItems() {
+//     return [...this.data];
+//   }
+// }
 
-const textStorage = new DataStorage<string>();
+// const textStorage = new DataStorage<string>();
 
-textStorage.addItem('Hello');
-textStorage.addItem('World');
-console.log('Values of Text Storage: ', textStorage.getItems()); // ['Hello', 'World']
-textStorage.addItem(1); // Error: Argument of type 'number' is not assignable to parameter of type 'string'
+// textStorage.addItem('Hello');
+// textStorage.addItem('World');
+// console.log('Values of Text Storage: ', textStorage.getItems()); // ['Hello', 'World']
+// textStorage.addItem(1); // Error: Argument of type 'number' is not assignable to parameter of type 'string'
 
-const numberStorage = new DataStorage<number>(1);
-numberStorage.addItem(1);
-numberStorage.addItem(2);
-console.log('Values of Numbers Storage: ', numberStorage.getItems()); // [1, 2]
-numberStorage.addItem('TEXT'); // Error: Argument of type 'number' is not assignable to parameter of type 'number'
+// const numberStorage = new DataStorage<number>(1);
+// numberStorage.addItem(1);
+// numberStorage.addItem(2);
+// console.log('Values of Numbers Storage: ', numberStorage.getItems()); // [1, 2]
+// numberStorage.addItem('TEXT'); // Error: Argument of type 'number' is not assignable to parameter of type 'number'
 
-const x: unknown = 'hello';
-console.log('Value:', x, 'Length:', (<string>x).length);
+// const x: unknown = '5';
+// console.log('Value:', x, 'Length:', (<string>x).length);
 
-type UserP = {
-  name: string;
-  age: number;
-  desc: string;
-};
+// type UserP = {
+//   name: string;
+//   age: number;
+//   desc: string;
+// };
 
-let User: UserP;
+// let User: UserP;
 
 let count = 0;
 const intervalId = setInterval(() => {
