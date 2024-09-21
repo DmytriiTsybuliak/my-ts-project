@@ -105,3 +105,49 @@ const intervalId = setInterval(() => {
 setTimeout(() => {
   clearInterval(intervalId);
 }, 5000);
+
+// let notSure: [number, string];
+// notSure = [5, 'maybe a string instead'];
+
+interface Animal {
+  name: string;
+}
+
+interface Animal {
+  age?: number;
+}
+
+const dog: Animal = {
+  name: 'Fido',
+  age: 5,
+};
+
+let arr: Array<string | number> = [];
+
+arr = ['Sstring', 5];
+console.log(arr);
+
+const promise: Promise<string> = new Promise(resolve => {
+  setInterval(() => {
+    resolve('Done!');
+  }, 1000);
+});
+
+promise.then(data => {
+  console.log(data);
+});
+
+// function identity<T>(arg: T): T {
+//   return console.log(arg, 'Type: ', typeof arg);
+// }
+
+// let output1 = identity('myString');
+// let output2 = identity(100);
+
+function merge<T, U>(objA: T, objB: U) {
+  return Object.assign(objA, objB);
+}
+
+const merged = merge({ name: 'Alisa' }, { age: 28 });
+
+merged.name;
